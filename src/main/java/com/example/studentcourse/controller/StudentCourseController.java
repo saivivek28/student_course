@@ -22,6 +22,13 @@ public class StudentCourseController {
     @Autowired
     private CourseService courseService;
 
+    // Test Operation: Check if controller works
+    @GetMapping("/ping")
+    @ResponseBody
+    public String ping() {
+        return "Controller is working!";
+    }
+
     // Read Operation: List all students
     @GetMapping
     public String listStudents(Model model) {
